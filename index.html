@@ -18,37 +18,38 @@ scroll-behavior: smooth;
 overflow-x: hidden;
 }
 .font-serif { font-family: 'DM Serif Display', serif; }
-/* THE RAW BEAM BACKGROUND */
+/* ENHANCED RAW BEAM ENGINE */
 .beam-container {
 position: fixed;
 inset: 0;
 z-index: -1;
 overflow: hidden;
 pointer-events: none;
+background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000000 100%);
 }
 .raw-beam {
 position: absolute;
-width: 1px;
-height: 100vh;
+width: 1.5px;
+height: 120vh;
 background: linear-gradient(to bottom, transparent, var(--kb-orange), transparent);
-opacity: 0.12;
-filter: blur(1px);
-animation: beam-travel 10s infinite linear;
+opacity: 0.25; /* Increased for visibility */
+filter: blur(0.5px) drop-shadow(0 0 8px var(--kb-orange)); /* Added Glow */
+animation: beam-travel 12s infinite linear;
 }
 @keyframes beam-travel {
-0% { transform: translateY(-100%) translateX(0); }
-100% { transform: translateY(100%) translateX(15vw); }
+0% { transform: translateY(-100%) translateX(0) rotate(5deg); }
+100% { transform: translateY(100%) translateX(25vw) rotate(5deg); }
 }
 .glass {
 background: rgba(255, 255, 255, 0.015);
-backdrop-filter: blur(30px);
--webkit-backdrop-filter: blur(30px);
-border: 0.5px solid rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(40px);
+-webkit-backdrop-filter: blur(40px);
+border: 0.5px solid rgba(255, 255, 255, 0.08);
 }
 .project-card { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
 .project-card:hover {
-border-color: rgba(255, 140, 0, 0.4);
-background: rgba(255, 140, 0, 0.02);
+border-color: rgba(255, 140, 0, 0.6);
+background: rgba(255, 140, 0, 0.04);
 transform: translateY(-5px);
 }
 .vibecoder-tag {
@@ -60,10 +61,12 @@ font-weight: 900;
 </style>
 </head>
 <body class="selection:bg-orange-500 selection:text-black">
+<!-- BEAM ENGINE LAYER -->
 <div class="beam-container">
-<div class="raw-beam" style="left: 15%; animation-delay: 0s;"></div>
-<div class="raw-beam" style="left: 45%; animation-delay: 3s; opacity: 0.08;"></div>
-<div class="raw-beam" style="left: 75%; animation-delay: 6s;"></div>
+<div class="raw-beam" style="left: 5%; animation-duration: 15s; opacity: 0.3;"></div>
+<div class="raw-beam" style="left: 30%; animation-duration: 10s; animation-delay: 2s;"></div>
+<div class="raw-beam" style="left: 60%; animation-duration: 18s; animation-delay: 5s; opacity: 0.2;"></div>
+<div class="raw-beam" style="left: 90%; animation-duration: 12s; animation-delay: 1s;"></div>
 </div>
 <!-- NAVIGATION -->
 <nav class="fixed top-0 w-full z-50 px-6 md:px-10 py-8 flex justify-end items-center">
@@ -81,7 +84,7 @@ Build. <br />
 <span class="vibecoder-tag">Vibecode.</span>
 </h1>
 <p class="text-zinc-500 text-base md:text-xl max-w-xl leading-relaxed font-light">
-My name is <span class="text-white font-bold">Joepaul Gospel</span>. I architect high-performance digital infrastructure. I don't just build products; I engineer the future of how teams create and scale.
+My name is <span class="text-white font-bold tracking-tight">Joepaul Gospel</span>. I architect high-performance digital infrastructure. I don't just build products; I engineer the future of how teams create and scale.
 </p>
 <div class="mt-12 flex flex-wrap gap-4 md:gap-6">
 <a href="https://wa.me/2347012027052" target="_blank" class="glass px-6 md:px-8 py-4 rounded-full flex items-center gap-4 hover:border-green-500/50 transition-all group">
@@ -106,7 +109,7 @@ My name is <span class="text-white font-bold">Joepaul Gospel</span>. I architect
 <div class="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center border border-white/10 mb-8 md:mb-12">
 <i data-lucide="bar-chart-3" class="text-orange-500" size="20"></i>
 </div>
-<h3 class="text-xl md:text-2xl font-black mb-4 tracking-tighter uppercase">The Ledger</h3>
+<h3 class="text-xl md:text-2xl font-black mb-4 tracking-tighter uppercase tracking-widest">The Ledger</h3>
 <p class="text-zinc-500 text-sm leading-relaxed font-medium mb-0">
 Multi-market investment OS. Real-time MT5 sync engine and visual performance mapping.
 </p>
@@ -116,7 +119,7 @@ Multi-market investment OS. Real-time MT5 sync engine and visual performance map
 <div class="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center border border-white/10 mb-8 md:mb-12">
 <i data-lucide="file-text" class="text-blue-500" size="20"></i>
 </div>
-<h3 class="text-xl md:text-2xl font-black mb-4 tracking-tighter uppercase">K-Resume</h3>
+<h3 class="text-xl md:text-2xl font-black mb-4 tracking-tighter uppercase tracking-widest">K-Resume</h3>
 <p class="text-zinc-500 text-sm leading-relaxed font-medium mb-0">
 The platform you are currently viewing. A high-performance deployment designed for the 2026 talent market.
 </p>
@@ -125,13 +128,13 @@ The platform you are currently viewing. A high-performance deployment designed f
 <div class="project-card glass p-8 md:p-12 rounded-[32px] md:rounded-[48px] opacity-40">
 <h3 class="text-lg md:text-xl font-black mb-2 tracking-tighter uppercase text-zinc-400">Klobe</h3>
 <p class="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-4 md:mb-6">Developing</p>
-<p class="text-zinc-600 text-sm leading-relaxed">Internal firm nervous system. Meritocracy-based upskilling hub.</p>
+<p class="text-zinc-600 text-sm leading-relaxed font-medium">Internal firm nervous system. Meritocracy-based upskilling hub.</p>
 </div>
 <!-- PROJECT: BEAM -->
 <div class="project-card glass p-8 md:p-12 rounded-[32px] md:rounded-[48px] opacity-40">
 <h3 class="text-lg md:text-xl font-black mb-2 tracking-tighter uppercase text-zinc-400">Beam</h3>
 <p class="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-4 md:mb-6">Developing</p>
-<p class="text-zinc-600 text-sm leading-relaxed">Wireless power grid utilizing resonant atmospheric broadcasting.</p>
+<p class="text-zinc-600 text-sm leading-relaxed font-medium">Wireless power grid utilizing resonant atmospheric broadcasting.</p>
 </div>
 </div>
 </section>
@@ -160,7 +163,7 @@ The platform you are currently viewing. A high-performance deployment designed f
 </section>
 <!-- FOOTER -->
 <footer class="p-16 md:p-24 text-center border-t border-white/5 relative bg-black">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-30"></div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-40"></div>
 <p class="text-[8px] font-black text-zinc-800 uppercase tracking-[0.8em] mb-6">Gospel // Kodeblock // 2026</p>
 <div class="flex justify-center gap-8 text-zinc-600">
 <a href="https://x.com/_GospelTheGreat" target="_blank" class="hover:text-white transition-colors"><i data-lucide="twitter" size="14"></i></a>
