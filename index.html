@@ -22,10 +22,11 @@ background: rgba(255, 255, 255, 0.02);
 backdrop-filter: blur(20px);
 border: 1px solid rgba(255, 255, 255, 0.05);
 }
+.project-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 .project-card:hover {
 border-color: var(--kb-orange);
-transform: translateY(-5px);
-box-shadow: 0 10px 40px rgba(255, 140, 0, 0.1);
+transform: translateY(-8px);
+box-shadow: 0 20px 50px rgba(255, 140, 0, 0.1);
 }
 .vibecoder-tag {
 background: linear-gradient(90deg, #FF8C00, #ff0080);
@@ -47,77 +48,103 @@ font-weight: 900;
 <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">
 <a href="#work" class="hover:text-white transition">Proof of Work</a>
 <a href="https://x.com/_GospelTheGreat" target="_blank" class="hover:text-white transition">X / Twitter</a>
-<a href="mailto:joepaulgospel9@gmail.com" class="text-white border-b border-orange-500 pb-1">Secure Talent</a>
+<a href="#about" class="text-white border-b border-orange-500 pb-1">About the Builder</a>
 </div>
 </nav>
 <!-- HERO SECTION -->
 <section class="min-h-screen flex flex-col justify-center px-10 md:px-32 relative overflow-hidden">
 <div class="absolute top-1/4 -left-20 w-96 h-96 bg-orange-600/10 rounded-full blur-[120px] glow-dot"></div>
-<p class="text-orange-500 font-black tracking-[0.5em] uppercase text-[10px] mb-6">Product Architect & Founder</p>
+<p class="text-orange-500 font-black tracking-[0.5em] uppercase text-[10px] mb-6 tracking-widest">Product Architect & Founder</p>
 <h1 class="text-6xl md:text-[120px] font-serif leading-[0.9] mb-10 tracking-tighter">
 The <span class="vibecoder-tag">Vibecoder</span> <br />
 Perspective.
 </h1>
 <p class="text-zinc-400 text-xl md:text-2xl max-w-2xl leading-relaxed font-light">
-I don't just build code; I vibe ecosystems into existence. As the Co-Founder of <span class="text-white font-bold tracking-tight">Kodeblock</span>, I architect high-performance tools using advanced AI logic and precision design.
+I don't just build code; I vibe ecosystems into existence. As the Co-Founder of <span class="text-white font-bold tracking-tight uppercase">Kodeblock</span>, I architect high-performance tools using advanced AI logic and precision design.
 </p>
 <!-- CONTACT PILLS -->
 <div class="mt-12 flex flex-wrap gap-4">
 <a href="mailto:joepaulgospel9@gmail.com" class="glass px-6 py-3 rounded-full flex items-center gap-3 hover:bg-white/5 transition-all">
-<i data-lucide="mail" size="14" class="text-orange-500"></i>
+<i data-lucide="mail" size={14} class="text-orange-500"></i>
 <span class="text-[10px] font-black uppercase tracking-widest">joepaulgospel9@gmail.com</span>
 </a>
 <a href="tel:+2347012027052" class="glass px-6 py-3 rounded-full flex items-center gap-3 hover:bg-white/5 transition-all">
-<i data-lucide="phone" size="14" class="text-orange-500"></i>
+<i data-lucide="phone" size={14} class="text-orange-500"></i>
 <span class="text-[10px] font-black uppercase tracking-widest">+234 701 202 7052</span>
 </a>
 </div>
 </section>
 <!-- PROOF OF WORK -->
 <section id="work" class="px-10 md:px-32 py-32 border-t border-white/5">
-<div class="flex items-center gap-4 mb-20">
+<div class="flex items-center gap-4 mb-24">
 <span class="w-12 h-[1px] bg-orange-500"></span>
 <h2 class="text-[12px] font-black uppercase tracking-[0.5em] text-zinc-500">Selected Works</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 <!-- PROJECT: THE LEDGER -->
-<a href="https://the-investor-ledger.vercel.app/" target="_blank" class="project-card glass p-12 rounded-[40px] transition-all duration-500 block group">
+<a href="https://the-investor-ledger.vercel.app/" target="_blank" class="project-card glass p-12 rounded-[40px] block group">
 <div class="flex justify-between items-start mb-12">
 <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-orange-500/50 transition-colors">
 <i data-lucide="bar-chart-3" class="text-orange-500"></i>
 </div>
 <span class="text-[9px] font-black uppercase bg-orange-500 text-black px-2 py-1 rounded">Live Terminal</span>
 </div>
-<h3 class="text-3xl font-bold mb-4 tracking-tight">The Ledger</h3>
-<p class="text-zinc-500 text-sm mb-10 leading-relaxed">
+<h3 class="text-3xl font-bold mb-4 tracking-tight uppercase">The Ledger</h3>
+<p class="text-zinc-500 text-sm mb-10 leading-relaxed font-medium">
 A multi-market investment operating system. I architected the UI and the synchronization logic to allow traders to monitor crypto, forex, and stocks in a single, high-performance dashboard.
 </p>
 <div class="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-orange-500">
-Open OS <i data-lucide="external-link" size="14"></i>
+Open OS <i data-lucide="external-link" size={14}></i>
 </div>
 </a>
 <!-- PROJECT: DONO -->
-<a href="https://ai.studio/apps/drive/1aIIyQVhGr9THLGUQbQVFdoCKZ1WWoiYc?fullscreenApplet=true" target="_blank" class="project-card glass p-12 rounded-[40px] transition-all duration-500 block group border-l-blue-600/30 border-l-4">
+<a href="https://ai.studio/apps/drive/1aIIyQVhGr9THLGUQbQVFdoCKZ1WWoiYc?fullscreenApplet=true" target="_blank" class="project-card glass p-12 rounded-[40px] block group border-l-blue-600/30 border-l-4">
 <div class="flex justify-between items-start mb-12">
 <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-blue-500/50 transition-colors">
 <i data-lucide="cpu" class="text-blue-500"></i>
 </div>
-<span class="text-[9px] font-black uppercase border border-zinc-700 text-zinc-500 px-2 py-1 rounded tracking-widest">Active Partner</span>
+<span class="text-[9px] font-black uppercase border border-zinc-700 text-zinc-500 px-2 py-1 rounded tracking-widest tracking-[0.2em]">Active Partner</span>
 </div>
-<h3 class="text-3xl font-bold mb-4 tracking-tight">DONO AI</h3>
-<p class="text-zinc-500 text-sm mb-10 leading-relaxed">
+<h3 class="text-3xl font-bold mb-4 tracking-tight uppercase">DONO AI</h3>
+<p class="text-zinc-500 text-sm mb-10 leading-relaxed font-medium">
 A high-performance AI partner built for Kodeblock. DONO functions as a strategic architect, managing firmware development, project validation, and team upskilling protocols.
 </p>
 <div class="flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-blue-500">
-Interact with Intelligence <i data-lucide="external-link" size="14"></i>
+Interact with Intelligence <i data-lucide="external-link" size={14}></i>
 </div>
 </a>
+<!-- PROJECT: KLOBE -->
+<div class="project-card glass p-12 rounded-[40px] opacity-70">
+<div class="flex justify-between items-start mb-12">
+<div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10">
+<i data-lucide="layout" class="text-purple-500"></i>
+</div>
+<span class="text-[9px] font-black uppercase border border-zinc-800 text-zinc-600 px-2 py-1 rounded">In Active Development</span>
+</div>
+<h3 class="text-3xl font-bold mb-4 tracking-tight uppercase text-zinc-300">Klobe</h3>
+<p class="text-zinc-600 text-sm leading-relaxed font-medium">
+The internal nervous system of Kodeblock. A private command center for team collaboration, meritocracy-based training, and institutional data management.
+</p>
+</div>
+<!-- PROJECT: BEAM -->
+<div class="project-card glass p-12 rounded-[40px] opacity-70">
+<div class="flex justify-between items-start mb-12">
+<div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10">
+<i data-lucide="zap" class="text-emerald-500"></i>
+</div>
+<span class="text-[9px] font-black uppercase border border-zinc-800 text-zinc-600 px-2 py-1 rounded">In Active Development</span>
+</div>
+<h3 class="text-3xl font-bold mb-4 tracking-tight uppercase text-zinc-300">Beam</h3>
+<p class="text-zinc-600 text-sm leading-relaxed font-medium">
+A moonshot infrastructure project. Wireless energy distribution utilizing resonant atmospheric broadcasting to eliminate physical grid overhead.
+</p>
+</div>
 </div>
 </section>
-<!-- INVENTORY -->
-<section id="stack" class="px-10 md:px-32 py-32 bg-[#050505] border-t border-white/5">
+<!-- ABOUT SECTION -->
+<section id="about" class="px-10 md:px-32 py-32 bg-[#050505] border-t border-white/5">
 <div class="max-w-4xl">
-<h2 class="text-5xl font-serif mb-16 leading-tight tracking-tighter uppercase">The Architect's <br /><span class="text-zinc-500 italic">Inventory</span></h2>
+<h2 class="text-5xl font-serif mb-16 leading-tight tracking-tighter uppercase">The Builder's <br /><span class="text-zinc-500 italic">Inventory</span></h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 <div>
 <p class="text-[10px] font-black text-orange-500 uppercase tracking-widest mb-6 italic">Architecture</p>
@@ -147,7 +174,7 @@ Interact with Intelligence <i data-lucide="external-link" size="14"></i>
 </div>
 </section>
 <!-- FOOTER -->
-<footer class="p-20 text-center border-t border-white/5 relative">
+<footer class="p-24 text-center border-t border-white/5 relative">
 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
 <h4 class="text-2xl font-serif italic text-zinc-500 mb-8 uppercase tracking-tighter">Let's build the future, one node at a time.</h4>
 <p class="text-[9px] font-black text-zinc-800 uppercase tracking-[0.6em]">Gospel // Kodeblock // 2026 Standard</p>
