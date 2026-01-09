@@ -8,7 +8,7 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:italic&display=swap" rel="stylesheet">
 <style>
-:root { --kb-orange: #FF8C00; }
+:root { --kb-orange: #FF8C00; --kb-emerald: #10b981; }
 body {
 background-color: #000000;
 color: #FFFFFF;
@@ -51,6 +51,10 @@ border: 0.5px solid rgba(255, 255, 255, 0.08);
 border-color: rgba(255, 140, 0, 0.6);
 background: rgba(255, 140, 0, 0.04);
 transform: translateY(-5px);
+}
+.project-card-emerald:hover {
+border-color: rgba(16, 185, 129, 0.6) !important;
+background: rgba(16, 185, 129, 0.04) !important;
 }
 .vibecoder-tag {
 background: linear-gradient(90deg, #FF8C00, #FFFFFF);
@@ -102,6 +106,19 @@ My name is <span class="text-white font-bold tracking-tight">Joepaul Gospel</spa
 <section id="work" class="px-6 md:px-32 py-24 md:py-32 border-t border-white/5 bg-black/40">
 <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-zinc-700 mb-16 md:mb-20">Selected Infrastructure</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+<!-- PROJECT: NERK FINANCIAL -->
+<a href="https://nerk-one.vercel.app/" target="_blank" class="project-card project-card-emerald glass p-8 md:p-12 rounded-[32px] md:rounded-[48px] block group relative overflow-hidden border-l-emerald-500/30 border-l-4">
+<div class="absolute top-0 right-0 p-6 md:p-8 opacity-10 group-hover:opacity-100 transition-opacity">
+<i data-lucide="external-link" size="18"></i>
+</div>
+<div class="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center border border-white/10 mb-8 md:mb-12">
+<i data-lucide="activity" class="text-emerald-500" size="20"></i>
+</div>
+<h3 class="text-xl md:text-2xl font-black mb-4 tracking-tighter uppercase tracking-widest text-emerald-500">NERK Financial</h3>
+<p class="text-zinc-500 text-sm leading-relaxed font-medium mb-0">
+The Fiscal HUD for fast-moving startups. High-precision burn tracking with a "Safe Zone" protocol and automated PDF statement generation.
+</p>
+</a>
 <!-- PROJECT: THE LEDGER -->
 <a href="https://the-investor-ledger.vercel.app/" target="_blank" class="project-card glass p-8 md:p-12 rounded-[32px] md:rounded-[48px] block group relative overflow-hidden">
 <div class="absolute top-0 right-0 p-6 md:p-8 opacity-10 group-hover:opacity-100 transition-opacity">
@@ -138,12 +155,6 @@ Temporal visualization engine. A high-performance tool for scarcity-driven execu
 The platform you are currently viewing. A high-performance deployment designed for the 2026 talent market.
 </p>
 </div>
-<!-- PROJECT: KLOBE -->
-<div class="project-card glass p-8 md:p-12 rounded-[32px] md:rounded-[48px] opacity-40">
-<h3 class="text-lg md:text-xl font-black mb-2 tracking-tighter uppercase text-zinc-400">Klobe</h3>
-<p class="text-zinc-600 text-[10px] font-bold uppercase tracking-widest mb-4 md:mb-6">Developing</p>
-<p class="text-zinc-600 text-sm leading-relaxed font-medium">Internal firm nervous system. Meritocracy-based upskilling hub.</p>
-</div>
 </div>
 </section>
 <!-- ABOUT THE BUILDER -->
@@ -162,7 +173,7 @@ The platform you are currently viewing. A high-performance deployment designed f
 <ul class="space-y-5 md:space-y-6 text-xs md:text-sm font-bold tracking-tight">
 <li class="flex items-center gap-4 text-white"><span class="w-2 h-2 bg-orange-500 rounded-full"></span> Vibecoding (Rapid Prototyping)</li>
 <li class="flex items-center gap-4 text-zinc-400"><span class="w-2 h-2 bg-zinc-800 rounded-full"></span> Product Architecture</li>
-<li class="flex items-center gap-4 text-zinc-400"><span class="w-2 h-2 bg-zinc-800 rounded-full"></span> Supabase Infrastructure</li>
+<li class="flex items-center gap-4 text-zinc-400"><span class="w-2 h-2 bg-zinc-800 rounded-full"></span> Financial Infrastructure</li>
 <li class="flex items-center gap-4 text-zinc-400"><span class="w-2 h-2 bg-zinc-800 rounded-full"></span> UX Psychology</li>
 <li class="flex items-center gap-4 text-zinc-400"><span class="w-2 h-2 bg-zinc-800 rounded-full"></span> Prompt Engineering</li>
 </ul>
